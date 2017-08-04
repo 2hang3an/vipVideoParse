@@ -1,134 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-    <head>
-	      <meta charset="UTF-8">
-		  <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-            video_analyze
-        </title>
-        <script type="text/javascript">
-            eval(function(p, a, c, k, e, d) {
-                e = function(c) {
-                    return (c < a ? "": e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
-                };
-                if (!''.replace(/^/, String)) {
-                    while (c--) d[e(c)] = k[c] || e(c);
-                    k = [function(e) {
-                        return d[e]
-                    }];
-                    e = function() {
-                        return '\\w+'
-                    };
-                    c = 1
-                };
-                while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
-                return p
-            } ('b a(){0 6=1.2("9").4;0 5=1.2("3");0 3=1.2("3").c;0 8=5.e[3].4;0 7=1.2("f");7.d=8+6}', 16, 16, 'var|document|getElementById|jk|value|jkurl|diz|cljurl|jkv|url|dihejk|function|selectedIndex|src|options|player'.split('|'), 0, {}))
-        </script>
-    </head>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> video_analyze</title>
+  <link href="./bootstrap.min.css" rel="stylesheet">
+  <link href="./stylee.css" type="text/css" rel="stylesheet">
+   <script type="text/javascript">eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('b a(){0 6=1.2("9").4;0 5=1.2("3");0 3=1.2("3").c;0 8=5.e[3].4;0 7=1.2("f");7.d=8+6}',16,16,'var|document|getElementById|jk|value|jkurl|diz|cljurl|jkv|url|dihejk|function|selectedIndex|src|options|player'.split('|'),0,{}))</script>
+   </head>
+<body background="./bg.png">
+  <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block" style="float: none;">
+  <h3 class="text-muted" align="center">video_analyze</h3>
+<hr>
+    <section style="margin-right: 5px; margin-left: 5px; border: 8px solid rgb(255, 255, 255); box-shadow: rgb(230, 230, 220) 0px 1px 2px 2px; border-radius: 2%; background-color: rgba(255, 255, 255, 0.6);">
+            <p style="letter-spacing: 1px; text-align: center;">
+<span style="color: #7F7F7F;">几乎能播放国内所有视频网站的vip视频。觉得好用请帮忙传播。若播放异常，请刷新或尝试更换接口。
+</span>
+            </p>
+    </section>
+	<div class="col-md-14 column">
+    <div class="panel panel-default">
+     <div id="kj" class="panel-body">
+   <iframe src=""id="player"width="100%"height="600px"allowTransparency="true"frameborder="0"scrolling="no"></iframe>	 
+     </div>
+    </div>
+   </div><div class="col-md-14 column">
+     <div class="input-group" style="width: 100%;">
+      <span class="input-group-addon input-lg" style="width: 80px; ">选择接口</span>
+      <select class="form-control input-lg" id="jk">
+	  <option value="http://dyhao.cn/p.php?s=1&u=" selected>①号接口,支持国内所有视频网站，速度快，稳定，移动端会有广告（可以关闭）。</option> 
+	  <option value="http://dyhao.cn/p.php?s=2&u=" >②号接口,支持国内所有视频网站，速度快，稳定，移动端会有广告（可以关闭）。</option>
+	  <option value="http://dyhao.cn/p.php?s=3&u=" >③号接口,支持国内所有视频网站，速度快，稳定，移动端会有广告（可以关闭）。</option>
+	  <option value="http://jiexi.92fz.cn/player/vip.php?url=" >(移动端慎用)①号备用接口,支持国内所有视频网站，速度比②,③号接口稍慢。</option>
+      <option value="http://api.baiyug.cn/vip/index.php?url=" >(移动端慎用)②号备用接口;支持国内所有视频网站，新团队,部分支持多清晰度选择，移动端会有广告（可以关闭）。</option>
+      <option value="http://yyygwz.com/index.php?url=" >(移动端慎用)③号备用接口,支持国内所有视频网站，支持多清晰度选择，pc端视频暂停时会给你弹个广告（可以关闭），移动端广告*2（可以关闭）。</option>
+	  <option value="http://yun.mt2t.com/yun?url=" >④号备用接口,人品接口，有时能解析前面接口都不能解析的视频</option>
+	  </select>
+     </div>
+     <br>
+     <div class="input-group" style="width: 100%;">
+      <span class="input-group-addon input-lg" style="width: 80px;">视频地址</span>
+      <input class="form-control input-lg" type="search" placeholder="电脑使用Ctrl+V粘贴网址-手机直接长按粘贴网址" id="url">
+     </div>
+     <br>
+     <div>
+      <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onclick="dihejk()">播放</button>
+     </div>  
+   </div>
+     <div class="unit-100">
+    <div class="language">
+        <a class="btn2 btn-outline2" href="http://www.le.com/" rel="nofollow" target="_blank">进入乐视视频</a>
+        <a class="btn2 btn-outline2" href="http://www.iqiyi.com/" rel="nofollow" target="_blank">进入奇艺视频</a>
+        <a class="btn2 btn-outline2" href="http://www.mgtv.com/" rel="nofollow" target="_blank">进入芒果视频</a>
+		    <a class="btn2 btn-outline2" href="http://www.tudou.com/" rel="nofollow" target="_blank">进入土豆视频</a>		
+       <br>
+		    <a class="btn2 btn-outline2" href="http://v.qq.com/" rel="nofollow" target="_blank">进入腾讯视频</a>		
+        <a class="btn2 btn-outline2" href="http://www.youku.com/" rel="nofollow" target="_blank">进入优酷视频</a>
+		    <a class="btn2 btn-outline2" href="http://tv.sohu.com/" rel="nofollow" target="_blank">进入搜狐视频</a>
+		    <a class="btn2 btn-outline2" href="http://www.pptv.com/" rel="nofollow" target="_blank">进入pptv视频</a>
+  </div>
+</div><table class="table table-bordered">
+	<tbody> 
+		<tr>
+		</tr>
+      </tbody>
+	  <!--换行-->
+          </table>
+		  	<table class="table table-bordered">
+<tbody>
+		<tr>
+            <td>
+    <h3>我要如何操作？？？</h3>
+    <ul style="list-style-type:none">
+        <li>第&nbsp;一&nbsp;步&nbsp;、进入各大视频网站，找到想要观看的VIP视频，然后复制链接（浏览器上的视频地址）。</li>
+        <li>第&nbsp;二&nbsp;步&nbsp;、将复制的链接粘贴到本站播放地址，并点击“播放”按钮。</li>
+        <li>第&nbsp;三&nbsp;步&nbsp;、等待片刻，观看视频。</li></ul>
+<div id="idontknow">
+		<tr>
+            <td>
+  <h3>我还是不会w(ﾟДﾟ)w</h3>
+     <div class="unit-100">
+    <div class="language">
+         <a class="btn2 btn-outline2" href="help.html" rel="nofollow" target="_blank">菜鸡专用图文教程
+</a>		
+    </div>
     
-    <body>
-        <br>
-        <div class="container" style="padding-top:10px;" id="wbk">
-            <div class="alert alert-success alert-dismissible" role="alert"> 
-            </div>
-			<center>
-            <div class="col-md-14 column">
-                <div class="panel panel-default">
-                    <div id="kj" class="panel-body">
-                        <iframe src=""
-                        id="player" width="80%" height="600px" allowTransparency="true" frameborder="1"
-                        scrolling="no">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-14 column">
-                <form method="get">
-				<center>
-                    <div class="input-group" style="width: 100%;">
-                        <span class="input-group-addon input-lg" style="width: 80px; ">
-                            选择接口(一般默认即可，PC/移动端均可全屏，自己摸索)：
-                        </span>
-                        <select class="form-control input-lg" id="jk">
-						    <option value="http://dyhao.cn/p.php?s=1&u=" selected>
-                                接口一：支持国内所有视频网站，速度快，稳定，移动端会有广告（可以关闭）。
-                            </option>
-							<option value="http://dyhao.cn/p.php?s=2&u=">
-                                接口二：支持国内所有视频网站，速度快，稳定，移动端会有广告（可以关闭）。
-                            </option>
-							<option value="http://dyhao.cn/p.php?s=3&u=">
-                                接口三：支持国内所有视频网站，速度快，稳定，移动端会有广告（可以关闭）。
-                            </option>
-                            <option value="http://jiexi.92fz.cn/player/vip.php?url=">
-                                （移动端慎用）备用接口一：支持国内所有视频网站，速度比接口二、三稍慢，代码更新慢，但好像挺稳，支持多清晰度选择，好像没广告？？？
-                            </option>
-							<option value="http://api.baiyug.cn/vip/index.php?url=">
-                                （移动端慎用）备用接口二：支持国内所有视频网站，新团队，我比较看好，偶尔会挂，挂了换其它接口，部分支持多清晰度选择，移动端会有广告（可以关闭）。
-                            </option>
-                            <option value="http://yyygwz.com/index.php?url=">
-                                （移动端慎用）备用接口三：支持国内所有视频网站，支持多清晰度选择，pc端视频暂停时会给你弹个广告（可以关闭），移动端广告*2（可以关闭）。
-                            </option>
-							<option value="http://yun.mt2t.com/yun?url=">
-                                （胡乱找的）备用接口四
-                            </option>
-							<option value="">
-                               （勿选）界面太丑了，求小姐姐或者大兄弟帮我美化下界面。
-                            </option>
-							<option value="">
-                               （勿选）广告不是我加的。
-                            </option>
-							<option value="">
-                               （勿选）网上接口成千上万，时间有限随便找了几个，若有视频所有接口都无法播放或者某接口失效请联系我更换。
-                            </option>
-							<option value="">
-                               （勿选）chrome对flash支持较差，如果出现弹出下载.swf文件或不能播放请换其他浏览器试试。
-                            </option>
-                        </select>
-                    </div>
-			    </center>
-                    <br/>
-				<center>	
-                    <div class="input-group" style="width: 100%;">
-                        <span class="input-group-addon input-lg" style="width: 80px;">
-                            你要观看视频的网址：
-                        </span>
-                        <input class="form-control input-lg" type="search" placeholder="粘贴网址后,点击“播放”"
-                        id="url">
-                    </div>
-                    <br>
-                    <div>
-                        <button id="bf" type="button" class="btn btn-success btn-lg btn-block"
-                        onclick="dihejk()">
-                            播放
-                        </button>
-                    </div>
-				 </center>
-                </form>
-            </div>
-			</center>
-            <br>
-            <br>
-			<br>
-			<br>
-            <br>
-        </div>
-        <br>
-        <div class="copyright">
-            <div class="container">
-                <div class="row text-center">
-				<center>
-				  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-				  <span id="busuanzi_container_site_uv">访问人数&nbsp<span id="busuanzi_value_site_uv"></span>  <br/> <br/>
-                  <span id="busuanzi_container_site_pv">总访问量&nbsp<span id="busuanzi_value_site_pv"></span>&nbsp次</span><br/> <br/>
-                    <div class="col-sm-12">
-                            Copyright © 2017 25j2yk.xyz. All Rights Reserved.
-                    </div>
-				<center>
-                </div>
-            </div>
-        </div>
-    </body>
+	
+<div id="learn">
+		<tr>
+            <td>
+  <h3>学习吗？老铁ԅ(¯﹃¯ԅ)</h3>
+     <div class="unit-100">
+    <div class="language">
+         <a class="btn2 btn-outline2" href="learn.html" rel="nofollow" target="_blank">澳门赌场专用学习通道
+</a>		
+    </div>
+	  
+<div id="remind">
+		<tr>
+            <td>
+  <h3>温馨提示</h3>
+     <div class="unit-100">
+    <div class="language">
+        <a class="btn2 btn-outline2"  rel="nofollow" >本站视频源于互联网视频网站，仅供学习交流，请勿用于其他用途。
+</a>
+    </div>
+	
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div></td>
+		</tr>
+      </tbody>
+	  </table>
+<!--PC和WAP自适应版-->
 
-</html>
+<script>
+
+    // 百度自动推送工具代码
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = '';
+        } else {
+            bp.src = '';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+	
+</script>
+
+<div class="panel-body" style="text-align: center;">
+ <div class="container-fluid">
+
+&nbsp;&nbsp;&nbsp;Copyright © 2017 25j2yk.xyz. All Rights Reserved. 
+</div>
+</div></div></body></html>
+<script type="text/javascript" src="love.js"></script>
