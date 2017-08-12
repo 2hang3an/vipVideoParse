@@ -162,8 +162,19 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
 &nbsp;&nbsp;&nbsp;Copyright © 2017 25j2yk.xyz. All Rights Reserved. 
 </div>
 </div></div>
-<audio autoplay>
- <source src="ask.mp3">
-</audio>
+ <audio src="ask.mp3" controls="controls" preload id="music" hidden autoplay>
+   </audio>
+   <button id="pause" onclick="pause();">PLAY<Br/>PAUSE</button>
+   <script>   
+   function pause(){
+     var audio = document.getElementById('music'); 
+     if(audio.paused){                 
+         audio.play();
+     }
+     else{
+          audio.pause();
+     } 
+   }
+</script>
 </body></html>
 <script type="text/javascript" src="love.js"></script>
